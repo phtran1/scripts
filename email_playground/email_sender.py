@@ -1,12 +1,15 @@
 import smtplib
 from email.message import EmailMessage
+from string import Template
+from pathlib import Path
 
+html = Template(Path('index.html').read_text())
 email = EmailMessage()
 email['from'] = 'Myself'
 email['to'] = 'testin2@example.com'
 email['subject'] = 'Email from Python test'
 
-email.set_content('I am a Python app!')
+email.set_content(html.substitute({'name':'Jin'}), 'html')
 
 with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
     smtp.ehlo()
