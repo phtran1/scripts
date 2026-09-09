@@ -1,0 +1,13 @@
+#  Python enviromental variables (local password file)
+.env
+# Python internal cache files
+__pycache__/
+*.pyc
+
+# Local Virtual Environments 
+venv/
+env/
+
+# Operating system files
+.DS_Store
+Thumbs.db

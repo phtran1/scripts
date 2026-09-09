@@ -37,14 +37,18 @@ def main():
     
     pw_list = raw_pw.split(',') 
 
+    print(f'Loaded {len(pw_list)} passwords to check safely.')
+
     # Returns how many times a password has been leaked and replaces password with * for output
     for pw in pw_list:
         count = pwned_api_check(pw)
         hidden_pw = '*' * len(pw)
+        print(f'Checking: {hidden_pw}')
         if count:
             print(f'{hidden_pw} was found {count} times... you should probably change your password.')
         else:
             print(f'{hidden_pw} was NOT leaked you are safe.')
+        print('------------------------------')
 
 if __name__ == '__main__':
     main()
