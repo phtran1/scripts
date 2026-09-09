@@ -12,7 +12,7 @@ Checks how many times a password has been leaked in data breaches using the Have
 **Terminal Preview:**
 ```bash
 $ python checkmypass.py
-Loaded 3 passwords to check safely.
+Loaded 2 passwords to check safely.
 
 Checking: ***********
 *********** was found 35,412 times... you should probably change your password.
