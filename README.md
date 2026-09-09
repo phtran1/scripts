@@ -30,7 +30,7 @@ To keep your real passwords off GitHub and out of your terminal command history,
 </details>
 
 <details>
-<summary><b>📨 2. Programmatic Email Dispatcher</b></summary>
+<summary><b>📨 2. Email Sender</b></summary>
 
 Logs into an SMTP server with Python's built in `smtplib` and sends an HTML email using a template file so the message body isn't a plain string in the code.
 </details>
