@@ -14,7 +14,7 @@ def request_api_data(query_char):
     return response
 
 def get_pw_leaks_count(hashes, hash_to_check):
-    # Matches tail with returned hashes to get our password count
+    # Matches tail with returned hashes to get the password leak count
     hashes = (line.split(':') for line in hashes.text.splitlines())
     for h, count in hashes:
         if h == hash_to_check:
