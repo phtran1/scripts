@@ -14,7 +14,7 @@ def request_api_data(query_char):
     return response
 
 def get_pw_leaks_count(hashes, hash_to_check):
-    # Matches tail with returned hashes to get the password leak count
+    # Matches tail with returned hashes to get the password leak n    count
     hashes = (line.split(':') for line in hashes.text.splitlines())
     for h, count in hashes:
         if h == hash_to_check:
@@ -42,7 +42,7 @@ def main():
     # Returns how many times a password has been leaked and replaces password with * for output
     for pw in pw_list:
         count = pwned_api_check(pw)
-        hidden_pw = '*' * len(pw)
+        hidden_pw = '*' * 8
         print(f'Checking: {hidden_pw}')
         if count:
             print(f'{hidden_pw} was found {count} times... you should probably change your password.')
