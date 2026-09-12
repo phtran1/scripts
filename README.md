@@ -25,7 +25,7 @@ Checking: ******
 **How to run it safely:**
 To keep your real passwords off GitHub and out of your terminal command history, this script reads from a localized `.env` file.
 1. Copy the template file: `cp .env.example .env`
-2. Open `.env` and add your passwords separated by commas: `secret_pw=hello,world`
+2. Open `.env` and add your passwords separated by commas: `secret_pw=examplepassword1,examplepassword2`
 3. Run the script: `python checkmypass.py`
 </details>
 
